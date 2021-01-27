@@ -1,0 +1,293 @@
+body {
+    background-color: #ef962d;
+}
+
+.judul {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Chelsea Market', cursive;
+    margin: 10px;
+}
+
+.scoreboard {
+    font-size: 46px;
+    text-align: center;
+    font-family: 'Chelsea Market', cursive;
+    margin: 10px;
+}
+
+/* .start {
+    color: #5a3f11 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 10px;
+    border: 4px solid #5a3f11 !important;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+}
+
+.start:hover {
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    transition: all 0.3s ease 0s;
+} */
+
+.start {
+    position: relative;
+    display: inline-block;
+    left: 47vw;
+}
+
+.start a {
+    color: floralwhite;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFA12B;
+    display: block;
+    position: relative;
+    padding: 10px 20px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.start a:active {
+    top: 10px;
+    background-color: #F78900;
+
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.start:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* #tombol {
+    text-align: center;
+    font-family: 'Chelsea Market', cursive;
+    margin: auto;
+    display: none;
+} */
+#tombol {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s ease;
+    display: none;
+    cursor: pointer;
+}
+
+/* .hai {
+    color: #fff;
+    padding-right: 0;
+    background-color: #f724db;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
+.hai:hover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+}
+
+.hai:after {
+    content: "\F004";
+    color: #e74c3c;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    right: -55px;
+    transition: all 0.2s ease;
+} */
+
+button {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    cursor: url(../img/palu1.png), auto;
+}
+
+.container:active {
+    cursor: url(../img/palu2.png), auto;
+}
+
+.rock {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.rock::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../img/rock.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    bottom: -35px;
+}
+
+.diglett {
+    width: 100%;
+    height: 100%;
+    background: url(../img/diglett.png) bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 130px;
+    transition: top 0.1s;
+}
+
+.rock.muncul .diglett {
+    top: 0;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /*background: rgb(207, 121, 50, 0);*/
+    width: 500px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #E55D87, 
+      rgba(95,195,228, 1)
+    ) 1 100%;
+    /* border-image-source: url(../img/border1.png);
+    border-image-slice: 25 25;
+    border-image-repeat: round; */
+    /*border-image: repeating-linear-gradient(45deg, white, white 1%, red 1%, red 8%) 10;*/
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: #E55D87;
+    color: rgb(95,195,228);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.content .modalfont {
+    font-family: 'Pacifico', cursive;
+    /*color: #fd8ae0;*/
+    color: #E55D87;
+}
+
+.content h1 {
+    font-size: 60px;
+}
+
+.content p {
+    font-size: 60px;
+}
+
+/* .wall {
+    background-color: #9c5518;
+    height: 210px;
+    margin-top: -15px;
+    width: 459px;
+    margin-left: -4px;
+} */
+
+.hai {
+    box-shadow:inset 0px 0px 15px 3px #f09f43;
+    background:linear-gradient(to bottom, #c96b00 5%, #ba6b11 100%);
+    background-color:#c96b00;
+    border-radius:17px;
+    border:1px solid #e67b00;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family:Georgia;
+    font-size:13px;
+    font-style:italic;
+    padding:6px 13px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #f78400;
+}
+.hai:hover {
+    background:linear-gradient(to bottom, #ba6b11 5%, #c96b00 100%);
+    background-color:#ba6b11;
+}
+.hai:active {
+    position:relative;
+    top:1px;
+}

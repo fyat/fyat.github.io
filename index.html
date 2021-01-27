@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/pokeball.png">
+    <title>Whack a Diglett</title>
+</head>
+
+<body>
+    <h1>Whack a Diglett</h1>
+
+    <!-- <button type="button" class="start" onclick="start()">Start</button> -->
+
+
+    <div class="start">
+        <a href="#" onclick="start()">Start</a>
+    </div>
+
+
+    <div class="scoreboard">0</div>
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1 class="modalfont">Hai Althea</h1>
+            <p class="modalfont">I Love U</p>
+        </div>
+    </div>
+    <button id="tombol" class="hai" onclick="togglePopup()">Click me</button>
+
+    <div class="container">
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+        <div class="rock">
+            <div class="diglett">
+
+            </div>
+        </div>
+    </div>
+
+    <audio src="audio/Effect.mp3" id="pop"></audio>
+    <!-- <audio src="audio/My Love.mp3" id="win"></audio> -->
+    <audio src="audio/countdown.mp3" id="countdown"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
